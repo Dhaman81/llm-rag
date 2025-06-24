@@ -2,17 +2,16 @@
 
 Repositori ini berisi aplikasi NLP berbasis Large Language Model (LLM) yang menggunakan teknik RAG (Retrieval-Augmented Generation) untuk meningkatkan kualitas jawaban berdasarkan dokumen eksternal. Aplikasi ini dibuat menggunakan Python 3.10 dan dilengkapi dengan antarmuka menggunakan Streamlit.
 
----
 
 ## 👤 Author
 **Dhaman**
 
----
 
 ## 📦 Fitur Utama
 - Ekstraksi dokumen menggunakan Docling
 - Penyimpanan dokumen dalam PostgreSQL dengan ekstensi pgvector
-- Pencarian vektor dengan FAISS atau PostgreSQL Vector
+- Pencarian vektor dengan PostgreSQL Vector
+- Manage collection untuk embedding
 - Evaluasi jawaban model menggunakan metrik **ROUGE** dan **BLEU**
 - Antarmuka pengguna sederhana berbasis Streamlit
 
@@ -71,8 +70,9 @@ sudo -u postgres psql -c "CREATE EXTENSION IF NOT EXISTS vector;"
 ```
 
 ### 5. Setting Environment untuk connect ke Database
+
+Buat file **ROUGE** yang berisi:
 ```bash
-Buat file **.env** yang berisi:
 DB_USER=user_db
 DB_PASS=password_db
 DB_HOST=localhost
