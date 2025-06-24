@@ -1,3 +1,25 @@
-langchain
-langchain-docling
-python-dotenv
+# Core LLM and RAG tools
+langchain==0.3.23
+langchain-community==0.3.21
+langchain-core==0.3.63
+langchain-docling==0.2.0
+langchain-ollama==0.3.2
+langchain-text-splitters==0.3.8
+
+# Web UI
+streamlit==1.44.1
+
+# Database and ORM
+sqlalchemy==2.0.0
+psycopg2==2.9.10
+psycopg2-binary==2.9.10
+
+# Evaluation
+rouge-score>=0.1.2
+nltk>=3.9.1
+
+# Data handling
+pandas>=2.2.3
+
+# System utilities
+pgvector>=0.4.1
