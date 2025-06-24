@@ -1,5 +1,6 @@
 # 🧠 Aplikasi LLM dengan RAG (Retrieval-Augmented Generation)
 
+
 Repositori ini berisi aplikasi NLP berbasis Large Language Model (LLM) yang menggunakan teknik RAG (Retrieval-Augmented Generation) untuk meningkatkan kualitas jawaban berdasarkan dokumen eksternal. Aplikasi ini dibuat menggunakan Python 3.10 dan dilengkapi dengan antarmuka menggunakan Streamlit.
 
 
@@ -71,7 +72,7 @@ sudo -u postgres psql -c "CREATE EXTENSION IF NOT EXISTS vector;"
 
 ### 5. Setting Environment untuk connect ke Database
 
-Buat file **ROUGE** yang berisi:
+Buat file **.env** yang berisi:
 ```bash
 DB_USER=user_db
 DB_PASS=password_db
