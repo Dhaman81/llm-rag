@@ -11,7 +11,6 @@ import libs.db as db
 from dotenv import load_dotenv
 load_dotenv()
 
-CONNECTION_STRING = "postgresql+psycopg2://dhaman:panikem01@localhost/odoo18c"
 # EMBEDDING_MODEL = "llama3.2"
 EMBEDDING_MODEL = "nomic-embed-text"
 

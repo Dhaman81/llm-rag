@@ -46,7 +46,7 @@ def init_rag_chain():
     # 3. Inisialisasi PGVector (vectorstore via LangChain)
     # -----------------------------
     # Ganti string di bawah dengan koneksi PostgreSQL Anda:
-    POSTGRES_CONNECTION_STRING = "postgresql+psycopg2://dhaman:panikem01@localhost/odoo18c"
+    POSTGRES_CONNECTION_STRING = ""
 
     try:
         # Nama tabel: rag_documents
