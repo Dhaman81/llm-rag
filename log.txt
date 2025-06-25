@@ -1,0 +1,413 @@
+================================================================================================================
+result
+================================================================================================================
+{'input': 'siapa perintis berdirinya CNI?', 'context': [Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/38', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 658.3, 'r': 520.274, 'b': 632.74, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 191]}]}], 'headings': ['Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)\nCNI pertama kali ada di Ciamis dibawa oleh Drs. Darman pada awal tahun 1990-an, tepatnya tanggal 30 September 1993 pada waktu itu beliau masih menjadi guru di salah satu SMP Negeri di Ciamis.'), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/62', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 5, 'bbox': {'l': 72.024, 't': 123.98000000000002, 'r': 517.013, 'b': 84.024, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 282]}, {'page_no': 5, 'bbox': {'l': 72.024, 't': 123.98000000000002, 'r': 517.013, 'b': 84.024, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [283, 691]}]}], 'headings': ['Sosok Sang Perintis di Balik Sukses CNI'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sosok Sang Perintis di Balik Sukses CNI\nibadah atau impian.'), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/45', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 135.98000000000002, 'r': 520.436, 'b': 81.38400000000001, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 317]}]}], 'headings': ['Sosok Sang Perintis di Balik Sukses CNI'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sosok Sang Perintis di Balik Sukses CNI\nManajemen perusahaan yang menjual hanya satu produk ini (yakni Sun Chlorella), dipegang sepenuhnya oleh Abrian, kecuali masalah keuangan. Di SCI, ia bertanggung jawab di segala lini mulai menangani administrasi, pemasaran, penjualan ke lapangan, gudang, layanan pelanggan, perizinan ke Depkes sampai urusan ke polisi.')], 'answer': 'Berdasarkan dokumen yang saya lihat, para perintis atau pendiri Perusahaan Citra Nusa Insan Cemerlang (CNI) adalah Drs. Darman. Ia membawa perusahaan tersebut ke daerah Ciamis pada awal tahun 1990-an dan berdiri pada tanggal 30 September 1993.'}
+ 
+================================================================================================================
+session
+================================================================================================================
+tags=['PGVector', 'OllamaEmbeddings'] vectorstore=<langchain_community.vectorstores.pgvector.PGVector object at 0x79f9474f7460> search_kwargs={'k': '3'}
+ 
+================================================================================================================
+ROUGE
+================================================================================================================
+{'rouge1': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rouge2': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rougeL': Score(precision=0.0, recall=0.0, fmeasure=0.0)}
+ 
+================================================================================================================
+BLEU
+================================================================================================================
+{'BLEU-1': 0, 'BLEU-2': 0, 'BLEU-3': 0, 'BLEU-4': 0}
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.4076070602228955 
+ Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)
+CNI pertama kali ada di Ciamis dibawa oleh Drs. Darman pada awal tahun 1990-an, tepatnya tanggal 30 September 1993 pada waktu itu beliau masih menjadi guru di salah satu SMP Negeri di Ciamis.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.4093949240503444 
+ Sosok Sang Perintis di Balik Sukses CNI
+ibadah atau impian.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.4115886720419215 
+ Sosok Sang Perintis di Balik Sukses CNI
+Manajemen perusahaan yang menjual hanya satu produk ini (yakni Sun Chlorella), dipegang sepenuhnya oleh Abrian, kecuali masalah keuangan. Di SCI, ia bertanggung jawab di segala lini mulai menangani administrasi, pemasaran, penjualan ke lapangan, gudang, layanan pelanggan, perizinan ke Depkes sampai urusan ke polisi.
+ 
+================================================================================================================
+result
+================================================================================================================
+{'input': 'siapa pendiri CNI?', 'context': [Document(metadata={'source': '/tmp/tmpdttv3n9l.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/346', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 40, 'bbox': {'l': 185.4, 't': 676.212, 'r': 530.03, 'b': 528.432, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 384]}]}], 'headings': ['Amway'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 9968385133834701515, 'filename': 'tmpdttv3n9l.pdf'}}}, page_content='Amway\nAmway  Indonesia  berdiri  tanggal  17  Juli  1992  melalui  PT Amindoway  Jaya  dan  PT  Amway  Indonesia.  PT  Amindoway  Jaya adalah perusahaan pemegang lisensi penjualan langsung dan distribusi produk Amway di Indonesia. PT Amway Indonesia adalah perusahaan yang memberikan jasa konsultasi dalam bidang pemasaran, pengembangan usaha, serta dukungan distributor aktif di Indonesia.'), Document(metadata={'source': '/tmp/tmpdttv3n9l.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/250', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 27, 'bbox': {'l': 239.4, 't': 289.812, 'r': 530.074, 'b': 86.832, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 433]}]}], 'headings': ['c. Garansi after service'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 9968385133834701515, 'filename': 'tmpdttv3n9l.pdf'}}}, page_content='c. Garansi after service\nBerdiri  pada  tahun  1986  dan  menjadi  perusahaan Indonesia pertama yang menerapkan konsep MLM menjadikan CNI sangat terkenal sebagai perusahaan MLM yang terbukti berhasil mengantarkan banyak anggota mencapai  kesuksesan.  Pertumbuhan  dan  perkembangan perusahaan  ini  terus  terlihat  baik  dari  segi  meningkatnya jumlah anggota, berdirinya kantor cabang di berbagai kota, serta dipasarkan berbagai produk baru yang inovatif.'), Document(metadata={'source': '/tmp/tmpdttv3n9l.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/248', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 27, 'bbox': {'l': 239.4, 't': 621.012, 'r': 530.063, 'b': 390.432, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 477]}]}, {'self_ref': '#/texts/249', 'parent': {'$ref': '#/groups/9'}, 'children': [], 'content_layer': 'body', 'label': 'list_item', 'prov': [{'page_no': 27, 'bbox': {'l': 221.4, 't': 345.012, 'r': 530.021, 'b': 307.632, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 95]}]}], 'headings': ['c. Garansi after service'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 9968385133834701515, 'filename': 'tmpdttv3n9l.pdf'}}}, page_content='c. Garansi after service\nPada pertengahan tahun 2008, CNI  melakukan restrukturisasi,  dengan  membentuk  beberapa  departemen baru,  yang  bertujuan  untuk  meningkatkan  jumlah  anggota dan  juga  jumlah  pendapatan  melalui  penjualan  produk dengan  menerapkan  sebuah  konsep  baru  yaitu  customer based orientation. Strategi, konsep, dan struktur organisasi yang  baru  ini  dapat  menjadi  sumber  motivasi  baru  bagi seluruh  pihak  yang  terlibat,  baik  karwayan  perusahaan maupun anggota.\n- 8. Menjadi perusahaan pertama di Indonesia yang menerapkan sistem MLM dan terdaftar dalam APLI.')], 'answer': 'Berdasarkan dokumen yang diberikan, tidak ada informasi tentang pendiri CNI. Namun, dapat disimpulkan bahwa CNI adalah perusahaan Indonesia pertama yang menerapkan konsep MLM dan telah terdaftar dalam APLI (Asosiasi Penjualan Distribusi Produk).'}
+ 
+================================================================================================================
+session
+================================================================================================================
+tags=['PGVector', 'OllamaEmbeddings'] vectorstore=<langchain_community.vectorstores.pgvector.PGVector object at 0x79f8593ca9e0> search_kwargs={'k': '3'}
+ 
+================================================================================================================
+ROUGE
+================================================================================================================
+{'rouge1': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rouge2': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rougeL': Score(precision=0, recall=0, fmeasure=0)}
+ 
+================================================================================================================
+BLEU
+================================================================================================================
+{'BLEU-1': 0, 'BLEU-2': 0, 'BLEU-3': 0, 'BLEU-4': 0}
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.34680728585309084 
+ Amway
+Amway  Indonesia  berdiri  tanggal  17  Juli  1992  melalui  PT Amindoway  Jaya  dan  PT  Amway  Indonesia.  PT  Amindoway  Jaya adalah perusahaan pemegang lisensi penjualan langsung dan distribusi produk Amway di Indonesia. PT Amway Indonesia adalah perusahaan yang memberikan jasa konsultasi dalam bidang pemasaran, pengembangan usaha, serta dukungan distributor aktif di Indonesia.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3596057589714585 
+ c. Garansi after service
+Berdiri  pada  tahun  1986  dan  menjadi  perusahaan Indonesia pertama yang menerapkan konsep MLM menjadikan CNI sangat terkenal sebagai perusahaan MLM yang terbukti berhasil mengantarkan banyak anggota mencapai  kesuksesan.  Pertumbuhan  dan  perkembangan perusahaan  ini  terus  terlihat  baik  dari  segi  meningkatnya jumlah anggota, berdirinya kantor cabang di berbagai kota, serta dipasarkan berbagai produk baru yang inovatif.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.36135843535611745 
+ c. Garansi after service
+Pada pertengahan tahun 2008, CNI  melakukan restrukturisasi,  dengan  membentuk  beberapa  departemen baru,  yang  bertujuan  untuk  meningkatkan  jumlah  anggota dan  juga  jumlah  pendapatan  melalui  penjualan  produk dengan  menerapkan  sebuah  konsep  baru  yaitu  customer based orientation. Strategi, konsep, dan struktur organisasi yang  baru  ini  dapat  menjadi  sumber  motivasi  baru  bagi seluruh  pihak  yang  terlibat,  baik  karwayan  perusahaan maupun anggota.
+- 8. Menjadi perusahaan pertama di Indonesia yang menerapkan sistem MLM dan terdaftar dalam APLI.
+ 
+================================================================================================================
+result
+================================================================================================================
+{'input': 'siapa pendiri CNI?', 'context': [Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/37', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 767.76, 'r': 521.147, 'b': 669.7, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 630]}]}], 'headings': ['Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content="Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)\nDi samping memiliki 9 kantor cabang di kota-kota besar di Indonesia (dibantu beberapa distributor yang ditunjuk menjadi point operator dari stock operator di wilayah Sumatera, Jawa, Bali, Nusa Tenggara, Kalimantan, Sulawesi, dan Irian Jaya). CNI juga memantapkan sayap-sayap bisnisnya ke mancanegara. Malaysia adalah negeri pertama yang dimasuki CNI, joint venture dengan sebuah perusahaan MLM lokal yang telah beroperasi hampir 4 tahun (1989-1993). Pada tahun 1993, CNI Indonesia-Malaysia ini juga memasuki pasar Hongkong, salah satu pusat perdagangan di Asia Pasifik, dan Batukan sampai ke negeri 'leluhur' MLM, Amerika Serikat."), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/45', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 135.98000000000002, 'r': 520.436, 'b': 81.38400000000001, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 317]}]}], 'headings': ['Sosok Sang Perintis di Balik Sukses CNI'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sosok Sang Perintis di Balik Sukses CNI\nManajemen perusahaan yang menjual hanya satu produk ini (yakni Sun Chlorella), dipegang sepenuhnya oleh Abrian, kecuali masalah keuangan. Di SCI, ia bertanggung jawab di segala lini mulai menangani administrasi, pemasaran, penjualan ke lapangan, gudang, layanan pelanggan, perizinan ke Depkes sampai urusan ke polisi.'), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/36', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 2, 'bbox': {'l': 72.024, 't': 160.58000000000004, 'r': 519.586, 'b': 77.06399999999996, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 505]}]}], 'headings': ['Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)\nSebagai perusahaan MLM yang pertama di Indonesia, CNI boleh dikatakan sebagai pionir dan sekaligus yang terbaik pengorganisasiannya dan terluas jaringan distribusinya. Pada tahun 1997, CNI mampu menarik minat sekitar 150.000 orang untuk melibatkan diri sebagai distributor independen CNI, dan menjelang akhir tahun 1998, CNI mencatat lebih dari 240.000 orang distributor independennya di Indonesia. Dengan demikian, CNI dapat dikatakan sebagai market leader di bisnis ini, dan bersaing ketat dengan AMWAY.')], 'answer': 'Pendiri CNI adalah Abrian.'}
+ 
+================================================================================================================
+session
+================================================================================================================
+tags=['PGVector', 'OllamaEmbeddings'] vectorstore=<langchain_community.vectorstores.pgvector.PGVector object at 0x79f8591d85e0> search_kwargs={'k': '3'}
+ 
+================================================================================================================
+ROUGE
+================================================================================================================
+{'rouge1': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rouge2': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rougeL': Score(precision=0, recall=0, fmeasure=0)}
+ 
+================================================================================================================
+BLEU
+================================================================================================================
+{'BLEU-1': 0, 'BLEU-2': 0, 'BLEU-3': 0, 'BLEU-4': 0}
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3556268827415946 
+ Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)
+Di samping memiliki 9 kantor cabang di kota-kota besar di Indonesia (dibantu beberapa distributor yang ditunjuk menjadi point operator dari stock operator di wilayah Sumatera, Jawa, Bali, Nusa Tenggara, Kalimantan, Sulawesi, dan Irian Jaya). CNI juga memantapkan sayap-sayap bisnisnya ke mancanegara. Malaysia adalah negeri pertama yang dimasuki CNI, joint venture dengan sebuah perusahaan MLM lokal yang telah beroperasi hampir 4 tahun (1989-1993). Pada tahun 1993, CNI Indonesia-Malaysia ini juga memasuki pasar Hongkong, salah satu pusat perdagangan di Asia Pasifik, dan Batukan sampai ke negeri 'leluhur' MLM, Amerika Serikat.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3567715175351376 
+ Sosok Sang Perintis di Balik Sukses CNI
+Manajemen perusahaan yang menjual hanya satu produk ini (yakni Sun Chlorella), dipegang sepenuhnya oleh Abrian, kecuali masalah keuangan. Di SCI, ia bertanggung jawab di segala lini mulai menangani administrasi, pemasaran, penjualan ke lapangan, gudang, layanan pelanggan, perizinan ke Depkes sampai urusan ke polisi.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3616900322885539 
+ Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)
+Sebagai perusahaan MLM yang pertama di Indonesia, CNI boleh dikatakan sebagai pionir dan sekaligus yang terbaik pengorganisasiannya dan terluas jaringan distribusinya. Pada tahun 1997, CNI mampu menarik minat sekitar 150.000 orang untuk melibatkan diri sebagai distributor independen CNI, dan menjelang akhir tahun 1998, CNI mencatat lebih dari 240.000 orang distributor independennya di Indonesia. Dengan demikian, CNI dapat dikatakan sebagai market leader di bisnis ini, dan bersaing ketat dengan AMWAY.
+ 
+================================================================================================================
+result
+================================================================================================================
+{'input': 'siapa pendiri CNI?', 'context': [Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/37', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 767.76, 'r': 521.147, 'b': 669.7, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 630]}]}], 'headings': ['Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content="Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)\nDi samping memiliki 9 kantor cabang di kota-kota besar di Indonesia (dibantu beberapa distributor yang ditunjuk menjadi point operator dari stock operator di wilayah Sumatera, Jawa, Bali, Nusa Tenggara, Kalimantan, Sulawesi, dan Irian Jaya). CNI juga memantapkan sayap-sayap bisnisnya ke mancanegara. Malaysia adalah negeri pertama yang dimasuki CNI, joint venture dengan sebuah perusahaan MLM lokal yang telah beroperasi hampir 4 tahun (1989-1993). Pada tahun 1993, CNI Indonesia-Malaysia ini juga memasuki pasar Hongkong, salah satu pusat perdagangan di Asia Pasifik, dan Batukan sampai ke negeri 'leluhur' MLM, Amerika Serikat."), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/45', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 135.98000000000002, 'r': 520.436, 'b': 81.38400000000001, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 317]}]}], 'headings': ['Sosok Sang Perintis di Balik Sukses CNI'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sosok Sang Perintis di Balik Sukses CNI\nManajemen perusahaan yang menjual hanya satu produk ini (yakni Sun Chlorella), dipegang sepenuhnya oleh Abrian, kecuali masalah keuangan. Di SCI, ia bertanggung jawab di segala lini mulai menangani administrasi, pemasaran, penjualan ke lapangan, gudang, layanan pelanggan, perizinan ke Depkes sampai urusan ke polisi.'), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/36', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 2, 'bbox': {'l': 72.024, 't': 160.58000000000004, 'r': 519.586, 'b': 77.06399999999996, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 505]}]}], 'headings': ['Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)\nSebagai perusahaan MLM yang pertama di Indonesia, CNI boleh dikatakan sebagai pionir dan sekaligus yang terbaik pengorganisasiannya dan terluas jaringan distribusinya. Pada tahun 1997, CNI mampu menarik minat sekitar 150.000 orang untuk melibatkan diri sebagai distributor independen CNI, dan menjelang akhir tahun 1998, CNI mencatat lebih dari 240.000 orang distributor independennya di Indonesia. Dengan demikian, CNI dapat dikatakan sebagai market leader di bisnis ini, dan bersaing ketat dengan AMWAY.')], 'answer': 'Berdasarkan dokumen yang saya baca, saya menemukan informasi tentang pendiri CNI (PT. Citra Nusa Insan Cemerlang) dalam bagian "Sosok Sang Perintis di Balik Sukses CNI". Menurut informasi tersebut, Abrian adalah orang yang menjalankan perusahaan dengan hanya memproduksi satu produk, yaitu Sun Chlorella, dan memiliki tanggung jawab atas segala aspek perusahaan mulai dari administrasi, pemasaran, penjualan, gudang, layanan pelanggan hingga urusan ke Depkes sampai urusan dengan polisi.\n\nJadi, berdasarkan informasi dalam dokumen tersebut, Abrian dianggap sebagai "Sosok Sang Perintis" di balik kesuksesan CNI.'}
+ 
+================================================================================================================
+session
+================================================================================================================
+tags=['PGVector', 'OllamaEmbeddings'] vectorstore=<langchain_community.vectorstores.pgvector.PGVector object at 0x79f8590e24d0> search_kwargs={'k': '3'}
+ 
+================================================================================================================
+ROUGE
+================================================================================================================
+{'rouge1': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rouge2': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rougeL': Score(precision=0, recall=0, fmeasure=0)}
+ 
+================================================================================================================
+BLEU
+================================================================================================================
+{'BLEU-1': 0, 'BLEU-2': 0, 'BLEU-3': 0, 'BLEU-4': 0}
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3556268827415946 
+ Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)
+Di samping memiliki 9 kantor cabang di kota-kota besar di Indonesia (dibantu beberapa distributor yang ditunjuk menjadi point operator dari stock operator di wilayah Sumatera, Jawa, Bali, Nusa Tenggara, Kalimantan, Sulawesi, dan Irian Jaya). CNI juga memantapkan sayap-sayap bisnisnya ke mancanegara. Malaysia adalah negeri pertama yang dimasuki CNI, joint venture dengan sebuah perusahaan MLM lokal yang telah beroperasi hampir 4 tahun (1989-1993). Pada tahun 1993, CNI Indonesia-Malaysia ini juga memasuki pasar Hongkong, salah satu pusat perdagangan di Asia Pasifik, dan Batukan sampai ke negeri 'leluhur' MLM, Amerika Serikat.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3567715175351376 
+ Sosok Sang Perintis di Balik Sukses CNI
+Manajemen perusahaan yang menjual hanya satu produk ini (yakni Sun Chlorella), dipegang sepenuhnya oleh Abrian, kecuali masalah keuangan. Di SCI, ia bertanggung jawab di segala lini mulai menangani administrasi, pemasaran, penjualan ke lapangan, gudang, layanan pelanggan, perizinan ke Depkes sampai urusan ke polisi.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3616900322885539 
+ Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)
+Sebagai perusahaan MLM yang pertama di Indonesia, CNI boleh dikatakan sebagai pionir dan sekaligus yang terbaik pengorganisasiannya dan terluas jaringan distribusinya. Pada tahun 1997, CNI mampu menarik minat sekitar 150.000 orang untuk melibatkan diri sebagai distributor independen CNI, dan menjelang akhir tahun 1998, CNI mencatat lebih dari 240.000 orang distributor independennya di Indonesia. Dengan demikian, CNI dapat dikatakan sebagai market leader di bisnis ini, dan bersaing ketat dengan AMWAY.
+ 
+================================================================================================================
+result
+================================================================================================================
+{'input': 'ceritakan sejarah berdirinya CNI', 'context': [Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/37', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 767.76, 'r': 521.147, 'b': 669.7, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 630]}]}], 'headings': ['Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content="Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)\nDi samping memiliki 9 kantor cabang di kota-kota besar di Indonesia (dibantu beberapa distributor yang ditunjuk menjadi point operator dari stock operator di wilayah Sumatera, Jawa, Bali, Nusa Tenggara, Kalimantan, Sulawesi, dan Irian Jaya). CNI juga memantapkan sayap-sayap bisnisnya ke mancanegara. Malaysia adalah negeri pertama yang dimasuki CNI, joint venture dengan sebuah perusahaan MLM lokal yang telah beroperasi hampir 4 tahun (1989-1993). Pada tahun 1993, CNI Indonesia-Malaysia ini juga memasuki pasar Hongkong, salah satu pusat perdagangan di Asia Pasifik, dan Batukan sampai ke negeri 'leluhur' MLM, Amerika Serikat."), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/38', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 658.3, 'r': 520.274, 'b': 632.74, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 191]}]}], 'headings': ['Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)\nCNI pertama kali ada di Ciamis dibawa oleh Drs. Darman pada awal tahun 1990-an, tepatnya tanggal 30 September 1993 pada waktu itu beliau masih menjadi guru di salah satu SMP Negeri di Ciamis.'), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/45', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 135.98000000000002, 'r': 520.436, 'b': 81.38400000000001, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 317]}]}], 'headings': ['Sosok Sang Perintis di Balik Sukses CNI'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sosok Sang Perintis di Balik Sukses CNI\nManajemen perusahaan yang menjual hanya satu produk ini (yakni Sun Chlorella), dipegang sepenuhnya oleh Abrian, kecuali masalah keuangan. Di SCI, ia bertanggung jawab di segala lini mulai menangani administrasi, pemasaran, penjualan ke lapangan, gudang, layanan pelanggan, perizinan ke Depkes sampai urusan ke polisi.')], 'answer': "Berdasarkan dokumen yang saya dapatkan, CNI (PT. Citra Nusa Insan Cemerlang) pertama kali ada di Ciamis pada awal tahun 1990-an, tepatnya tanggal 30 September 1993. Pada saat itu, Drs. Darman membawa perusahaan ini ke Ciamis.\n\nSelanjutnya, CNI memantapkan sayap-sayap bisnisnya ke mancanegara, dengan Malaysia sebagai negeri pertama yang dimasuki. Perusahaan ini juga memasuki pasar Hongkong dan Amerika Serikat (negeri 'leluhur' MLM).\n\nJadi, sejarah berdirinya CNI dapat dibagi menjadi beberapa tahap:\n\n1. Awal tahun 1990-an: CNI pertama kali ada di Ciamis dengan pendirian perusahaan oleh Drs. Darman.\n2. Tahun 1993: CNI memasuki Malaysia sebagai negeri pertama di mancanegara.\n3. Tahun 1993: CNI juga memasuki pasar Hongkong dan Amerika Serikat (negeri 'leluhur' MLM).\n\nSemoga informasi ini membantu Anda dalam mengetahui sejarah berdirinya CNI."}
+ 
+================================================================================================================
+session
+================================================================================================================
+tags=['PGVector', 'OllamaEmbeddings'] vectorstore=<langchain_community.vectorstores.pgvector.PGVector object at 0x79f859063c10> search_kwargs={'k': '3'}
+ 
+================================================================================================================
+ROUGE
+================================================================================================================
+{'rouge1': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rouge2': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rougeL': Score(precision=0, recall=0, fmeasure=0)}
+ 
+================================================================================================================
+BLEU
+================================================================================================================
+{'BLEU-1': 0, 'BLEU-2': 0, 'BLEU-3': 0, 'BLEU-4': 0}
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.5421575061638122 
+ Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)
+Di samping memiliki 9 kantor cabang di kota-kota besar di Indonesia (dibantu beberapa distributor yang ditunjuk menjadi point operator dari stock operator di wilayah Sumatera, Jawa, Bali, Nusa Tenggara, Kalimantan, Sulawesi, dan Irian Jaya). CNI juga memantapkan sayap-sayap bisnisnya ke mancanegara. Malaysia adalah negeri pertama yang dimasuki CNI, joint venture dengan sebuah perusahaan MLM lokal yang telah beroperasi hampir 4 tahun (1989-1993). Pada tahun 1993, CNI Indonesia-Malaysia ini juga memasuki pasar Hongkong, salah satu pusat perdagangan di Asia Pasifik, dan Batukan sampai ke negeri 'leluhur' MLM, Amerika Serikat.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.5499638994829197 
+ Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)
+CNI pertama kali ada di Ciamis dibawa oleh Drs. Darman pada awal tahun 1990-an, tepatnya tanggal 30 September 1993 pada waktu itu beliau masih menjadi guru di salah satu SMP Negeri di Ciamis.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.5529230898370298 
+ Sosok Sang Perintis di Balik Sukses CNI
+Manajemen perusahaan yang menjual hanya satu produk ini (yakni Sun Chlorella), dipegang sepenuhnya oleh Abrian, kecuali masalah keuangan. Di SCI, ia bertanggung jawab di segala lini mulai menangani administrasi, pemasaran, penjualan ke lapangan, gudang, layanan pelanggan, perizinan ke Depkes sampai urusan ke polisi.
+ 
+================================================================================================================
+result
+================================================================================================================
+{'input': 'dimana kantor CNI?', 'context': [Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/14', 'parent': {'$ref': '#/groups/1'}, 'children': [], 'content_layer': 'body', 'label': 'list_item', 'prov': [{'page_no': 1, 'bbox': {'l': 90.024, 't': 267.53, 'r': 349.917, 'b': 256.49, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 55]}]}, {'self_ref': '#/texts/15', 'parent': {'$ref': '#/groups/1'}, 'children': [], 'content_layer': 'body', 'label': 'list_item', 'prov': [{'page_no': 1, 'bbox': {'l': 90.024, 't': 253.01, 'r': 487.586, 'b': 241.97000000000003, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 82]}]}], 'headings': ['Tahun 1987-1991 - Ekspansi ke Jakarta'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Tahun 1987-1991 - Ekspansi ke Jakarta\n1. Kantor pusat dipindahkan ke Jakarta pada tahun 1987.\n2. Mengalami beberapa kali relokasi kantor untuk mengakomodasi pertumbuhan bisnis.'), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/33', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 2, 'bbox': {'l': 72.024, 't': 387.53, 'r': 517.411, 'b': 332.93, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 367]}]}], 'headings': ['Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)\nPerkembangan yang sangat pesat pada usaha ini, membawanya ke Jakarta pada tahun 1987. Kantor mereka yang pertama di ibukota terletak di Kompleks Duta Merlin, dekat persimpangan Harmoni, Jakarta Pusat. Dua tahun berikutnya, mereka pindah ke Jl. K. H. Hasyim Ashari, sebelum akhirnya pindah lagi ke Kompleks Prisma dekat Plaza di Kebon Jeruk, Jakarta Barat, tahun 1991.'), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/59', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 5, 'bbox': {'l': 72.024, 't': 365.45, 'r': 504.195, 'b': 325.37, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 237]}]}], 'headings': ['Sosok Sang Perintis di Balik Sukses CNI'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sosok Sang Perintis di Balik Sukses CNI\nTahun 2003 merupakan titik sejarah penting bagi perkembangan CNI di Indonesia. Saat itu CNI membeli sebuah gedung berlantai 10 di Kompleks Green Garden, Arteri Kedoya, Jak-Bar. Gedung inilah yang menjadi kantor pusat CNI hingga sekarang.')], 'answer': 'Kantor pusat CNI (PT Citra Nusa Insan Cemerlang) terletak di Kompleks Green Garden, Arteri Kedoya, Jakarta Barat.'}
+ 
+================================================================================================================
+session
+================================================================================================================
+tags=['PGVector', 'OllamaEmbeddings'] vectorstore=<langchain_community.vectorstores.pgvector.PGVector object at 0x79f864701390> search_kwargs={'k': '3'}
+ 
+================================================================================================================
+ROUGE
+================================================================================================================
+{'rouge1': Score(precision=0.058823529411764705, recall=0.16666666666666666, fmeasure=0.08695652173913045), 'rouge2': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rougeL': Score(precision=0.058823529411764705, recall=0.16666666666666666, fmeasure=0.08695652173913045)}
+ 
+================================================================================================================
+BLEU
+================================================================================================================
+{'BLEU-1': 0.0588235294117647, 'BLEU-2': 0.032274177804583096, 'BLEU-3': 0.02226622388185267, 'BLEU-4': 0.014936192853457254}
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.4495478081763772 
+ Tahun 1987-1991 - Ekspansi ke Jakarta
+1. Kantor pusat dipindahkan ke Jakarta pada tahun 1987.
+2. Mengalami beberapa kali relokasi kantor untuk mengakomodasi pertumbuhan bisnis.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.4685696844097471 
+ Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)
+Perkembangan yang sangat pesat pada usaha ini, membawanya ke Jakarta pada tahun 1987. Kantor mereka yang pertama di ibukota terletak di Kompleks Duta Merlin, dekat persimpangan Harmoni, Jakarta Pusat. Dua tahun berikutnya, mereka pindah ke Jl. K. H. Hasyim Ashari, sebelum akhirnya pindah lagi ke Kompleks Prisma dekat Plaza di Kebon Jeruk, Jakarta Barat, tahun 1991.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.4725642297494531 
+ Sosok Sang Perintis di Balik Sukses CNI
+Tahun 2003 merupakan titik sejarah penting bagi perkembangan CNI di Indonesia. Saat itu CNI membeli sebuah gedung berlantai 10 di Kompleks Green Garden, Arteri Kedoya, Jak-Bar. Gedung inilah yang menjadi kantor pusat CNI hingga sekarang.
+ 
+================================================================================================================
+result
+================================================================================================================
+{'input': 'siapa pendiri CNI?', 'context': [Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/37', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 767.76, 'r': 521.147, 'b': 669.7, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 630]}]}], 'headings': ['Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content="Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)\nDi samping memiliki 9 kantor cabang di kota-kota besar di Indonesia (dibantu beberapa distributor yang ditunjuk menjadi point operator dari stock operator di wilayah Sumatera, Jawa, Bali, Nusa Tenggara, Kalimantan, Sulawesi, dan Irian Jaya). CNI juga memantapkan sayap-sayap bisnisnya ke mancanegara. Malaysia adalah negeri pertama yang dimasuki CNI, joint venture dengan sebuah perusahaan MLM lokal yang telah beroperasi hampir 4 tahun (1989-1993). Pada tahun 1993, CNI Indonesia-Malaysia ini juga memasuki pasar Hongkong, salah satu pusat perdagangan di Asia Pasifik, dan Batukan sampai ke negeri 'leluhur' MLM, Amerika Serikat."), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/45', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 135.98000000000002, 'r': 520.436, 'b': 81.38400000000001, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 317]}]}], 'headings': ['Sosok Sang Perintis di Balik Sukses CNI'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sosok Sang Perintis di Balik Sukses CNI\nManajemen perusahaan yang menjual hanya satu produk ini (yakni Sun Chlorella), dipegang sepenuhnya oleh Abrian, kecuali masalah keuangan. Di SCI, ia bertanggung jawab di segala lini mulai menangani administrasi, pemasaran, penjualan ke lapangan, gudang, layanan pelanggan, perizinan ke Depkes sampai urusan ke polisi.'), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/36', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 2, 'bbox': {'l': 72.024, 't': 160.58000000000004, 'r': 519.586, 'b': 77.06399999999996, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 505]}]}], 'headings': ['Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)\nSebagai perusahaan MLM yang pertama di Indonesia, CNI boleh dikatakan sebagai pionir dan sekaligus yang terbaik pengorganisasiannya dan terluas jaringan distribusinya. Pada tahun 1997, CNI mampu menarik minat sekitar 150.000 orang untuk melibatkan diri sebagai distributor independen CNI, dan menjelang akhir tahun 1998, CNI mencatat lebih dari 240.000 orang distributor independennya di Indonesia. Dengan demikian, CNI dapat dikatakan sebagai market leader di bisnis ini, dan bersaing ketat dengan AMWAY.')], 'answer': 'Pendiri perusahaan Citra Nusa Insan Cemerlang (CNI) adalah Abrian.'}
+ 
+================================================================================================================
+session
+================================================================================================================
+tags=['PGVector', 'OllamaEmbeddings'] vectorstore=<langchain_community.vectorstores.pgvector.PGVector object at 0x79f9474f6c20> search_kwargs={'k': '3'}
+ 
+================================================================================================================
+ROUGE
+================================================================================================================
+{'rouge1': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rouge2': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rougeL': Score(precision=0, recall=0, fmeasure=0)}
+ 
+================================================================================================================
+BLEU
+================================================================================================================
+{'BLEU-1': 0, 'BLEU-2': 0, 'BLEU-3': 0, 'BLEU-4': 0}
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3556268827415946 
+ Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)
+Di samping memiliki 9 kantor cabang di kota-kota besar di Indonesia (dibantu beberapa distributor yang ditunjuk menjadi point operator dari stock operator di wilayah Sumatera, Jawa, Bali, Nusa Tenggara, Kalimantan, Sulawesi, dan Irian Jaya). CNI juga memantapkan sayap-sayap bisnisnya ke mancanegara. Malaysia adalah negeri pertama yang dimasuki CNI, joint venture dengan sebuah perusahaan MLM lokal yang telah beroperasi hampir 4 tahun (1989-1993). Pada tahun 1993, CNI Indonesia-Malaysia ini juga memasuki pasar Hongkong, salah satu pusat perdagangan di Asia Pasifik, dan Batukan sampai ke negeri 'leluhur' MLM, Amerika Serikat.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3567715175351376 
+ Sosok Sang Perintis di Balik Sukses CNI
+Manajemen perusahaan yang menjual hanya satu produk ini (yakni Sun Chlorella), dipegang sepenuhnya oleh Abrian, kecuali masalah keuangan. Di SCI, ia bertanggung jawab di segala lini mulai menangani administrasi, pemasaran, penjualan ke lapangan, gudang, layanan pelanggan, perizinan ke Depkes sampai urusan ke polisi.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3616900322885539 
+ Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)
+Sebagai perusahaan MLM yang pertama di Indonesia, CNI boleh dikatakan sebagai pionir dan sekaligus yang terbaik pengorganisasiannya dan terluas jaringan distribusinya. Pada tahun 1997, CNI mampu menarik minat sekitar 150.000 orang untuk melibatkan diri sebagai distributor independen CNI, dan menjelang akhir tahun 1998, CNI mencatat lebih dari 240.000 orang distributor independennya di Indonesia. Dengan demikian, CNI dapat dikatakan sebagai market leader di bisnis ini, dan bersaing ketat dengan AMWAY.
+ 
+================================================================================================================
+result
+================================================================================================================
+{'input': 'Siapa pendiri CNI?', 'context': [Document(metadata={'source': '/tmp/tmpdttv3n9l.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/346', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 40, 'bbox': {'l': 185.4, 't': 676.212, 'r': 530.03, 'b': 528.432, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 384]}]}], 'headings': ['Amway'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 9968385133834701515, 'filename': 'tmpdttv3n9l.pdf'}}}, page_content='Amway\nAmway  Indonesia  berdiri  tanggal  17  Juli  1992  melalui  PT Amindoway  Jaya  dan  PT  Amway  Indonesia.  PT  Amindoway  Jaya adalah perusahaan pemegang lisensi penjualan langsung dan distribusi produk Amway di Indonesia. PT Amway Indonesia adalah perusahaan yang memberikan jasa konsultasi dalam bidang pemasaran, pengembangan usaha, serta dukungan distributor aktif di Indonesia.'), Document(metadata={'source': '/tmp/tmpdttv3n9l.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/250', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 27, 'bbox': {'l': 239.4, 't': 289.812, 'r': 530.074, 'b': 86.832, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 433]}]}], 'headings': ['c. Garansi after service'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 9968385133834701515, 'filename': 'tmpdttv3n9l.pdf'}}}, page_content='c. Garansi after service\nBerdiri  pada  tahun  1986  dan  menjadi  perusahaan Indonesia pertama yang menerapkan konsep MLM menjadikan CNI sangat terkenal sebagai perusahaan MLM yang terbukti berhasil mengantarkan banyak anggota mencapai  kesuksesan.  Pertumbuhan  dan  perkembangan perusahaan  ini  terus  terlihat  baik  dari  segi  meningkatnya jumlah anggota, berdirinya kantor cabang di berbagai kota, serta dipasarkan berbagai produk baru yang inovatif.'), Document(metadata={'source': '/tmp/tmpdttv3n9l.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/24', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 5, 'bbox': {'l': 185.4, 't': 621.012, 'r': 530.026, 'b': 500.832, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 264]}]}, {'self_ref': '#/texts/25', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 5, 'bbox': {'l': 185.4, 't': 483.012, 'r': 530.081, 'b': 362.832, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 301]}]}], 'headings': ['4.3.1 Sejarah Perusahaan'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 9968385133834701515, 'filename': 'tmpdttv3n9l.pdf'}}}, page_content='4.3.1 Sejarah Perusahaan\nMeski menjadi market leader dan trendsetter industri MLM di Indonesia,  CNI  tak  henti-hentinya  melakukan  inovasi  kreatif  dalam bisnisnya sehingga akan lebih banyak masyarakat mendapatkan manfaat dari produk-produk CNI melalui cara yang lebih mudah dan cepat.\nPesatnya  perkembangan  perusahaan  membuat  CNI  menjadi sebuah  perusahaan  regional  yang  optimis  melebarkan  sayapnya  ke mancanegara.  Di  bawah  bendera  CNI  International  Corporation  di Malaysia,  CNI  dapat  ditemui  di  Malaysia,  Hongkong,  Singapura, Filipina, Brunei, India dan China.')], 'answer': 'Saya tidak bisa menemukan informasi tentang siapa adalah pendiri dari perusahaan tersebut yang disebutkan dalam dokumen yang tersedia.'}
+ 
+================================================================================================================
+session
+================================================================================================================
+tags=['PGVector', 'OllamaEmbeddings'] vectorstore=<langchain_community.vectorstores.pgvector.PGVector object at 0x79f85ff52a40> search_kwargs={'k': '3'}
+ 
+================================================================================================================
+ROUGE
+================================================================================================================
+{'rouge1': Score(precision=0.16666666666666666, recall=0.3333333333333333, fmeasure=0.2222222222222222), 'rouge2': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rougeL': Score(precision=0.1111111111111111, recall=0.2222222222222222, fmeasure=0.14814814814814814)}
+ 
+================================================================================================================
+BLEU
+================================================================================================================
+{'BLEU-1': 0.16666666666666669, 'BLEU-2': 0.05323248821780723, 'BLEU-3': 0.030527546103960117, 'BLEU-4': 0.018738720292863827}
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3042556702120184 
+ Amway
+Amway  Indonesia  berdiri  tanggal  17  Juli  1992  melalui  PT Amindoway  Jaya  dan  PT  Amway  Indonesia.  PT  Amindoway  Jaya adalah perusahaan pemegang lisensi penjualan langsung dan distribusi produk Amway di Indonesia. PT Amway Indonesia adalah perusahaan yang memberikan jasa konsultasi dalam bidang pemasaran, pengembangan usaha, serta dukungan distributor aktif di Indonesia.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3257868157665186 
+ c. Garansi after service
+Berdiri  pada  tahun  1986  dan  menjadi  perusahaan Indonesia pertama yang menerapkan konsep MLM menjadikan CNI sangat terkenal sebagai perusahaan MLM yang terbukti berhasil mengantarkan banyak anggota mencapai  kesuksesan.  Pertumbuhan  dan  perkembangan perusahaan  ini  terus  terlihat  baik  dari  segi  meningkatnya jumlah anggota, berdirinya kantor cabang di berbagai kota, serta dipasarkan berbagai produk baru yang inovatif.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3280145797064892 
+ 4.3.1 Sejarah Perusahaan
+Meski menjadi market leader dan trendsetter industri MLM di Indonesia,  CNI  tak  henti-hentinya  melakukan  inovasi  kreatif  dalam bisnisnya sehingga akan lebih banyak masyarakat mendapatkan manfaat dari produk-produk CNI melalui cara yang lebih mudah dan cepat.
+Pesatnya  perkembangan  perusahaan  membuat  CNI  menjadi sebuah  perusahaan  regional  yang  optimis  melebarkan  sayapnya  ke mancanegara.  Di  bawah  bendera  CNI  International  Corporation  di Malaysia,  CNI  dapat  ditemui  di  Malaysia,  Hongkong,  Singapura, Filipina, Brunei, India dan China.
+ 
+================================================================================================================
+result
+================================================================================================================
+{'input': 'siapa pendiri CNI?', 'context': [Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/37', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 767.76, 'r': 521.147, 'b': 669.7, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 630]}]}], 'headings': ['Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content="Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)\nDi samping memiliki 9 kantor cabang di kota-kota besar di Indonesia (dibantu beberapa distributor yang ditunjuk menjadi point operator dari stock operator di wilayah Sumatera, Jawa, Bali, Nusa Tenggara, Kalimantan, Sulawesi, dan Irian Jaya). CNI juga memantapkan sayap-sayap bisnisnya ke mancanegara. Malaysia adalah negeri pertama yang dimasuki CNI, joint venture dengan sebuah perusahaan MLM lokal yang telah beroperasi hampir 4 tahun (1989-1993). Pada tahun 1993, CNI Indonesia-Malaysia ini juga memasuki pasar Hongkong, salah satu pusat perdagangan di Asia Pasifik, dan Batukan sampai ke negeri 'leluhur' MLM, Amerika Serikat."), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/45', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 135.98000000000002, 'r': 520.436, 'b': 81.38400000000001, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 317]}]}], 'headings': ['Sosok Sang Perintis di Balik Sukses CNI'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sosok Sang Perintis di Balik Sukses CNI\nManajemen perusahaan yang menjual hanya satu produk ini (yakni Sun Chlorella), dipegang sepenuhnya oleh Abrian, kecuali masalah keuangan. Di SCI, ia bertanggung jawab di segala lini mulai menangani administrasi, pemasaran, penjualan ke lapangan, gudang, layanan pelanggan, perizinan ke Depkes sampai urusan ke polisi.'), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/36', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 2, 'bbox': {'l': 72.024, 't': 160.58000000000004, 'r': 519.586, 'b': 77.06399999999996, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 505]}]}], 'headings': ['Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)\nSebagai perusahaan MLM yang pertama di Indonesia, CNI boleh dikatakan sebagai pionir dan sekaligus yang terbaik pengorganisasiannya dan terluas jaringan distribusinya. Pada tahun 1997, CNI mampu menarik minat sekitar 150.000 orang untuk melibatkan diri sebagai distributor independen CNI, dan menjelang akhir tahun 1998, CNI mencatat lebih dari 240.000 orang distributor independennya di Indonesia. Dengan demikian, CNI dapat dikatakan sebagai market leader di bisnis ini, dan bersaing ketat dengan AMWAY.')], 'answer': 'Berdasarkan dokumen yang saya analisis, tidak ada informasi yang spesifik tentang identitas pendiri CNI. Namun, dapat disimpulkan bahwa Abrian adalah orang yang memiliki pengaruh besar dalam perusahaan tersebut, karena ia menjalankan manajemen perusahaan yang menjual Sun Chlorella dan bertanggung jawab atas berbagai aspek bisnis.\n\nSelain itu, dokumen juga menyebutkan bahwa CNI menjadi perusahaan MLM (Multi-Level Marketing) yang pertama di Indonesia, dan Abrian dapat dikatakan sebagai salah satu pionir dalam pengorganisasiannya.'}
+ 
+================================================================================================================
+session
+================================================================================================================
+tags=['PGVector', 'OllamaEmbeddings'] vectorstore=<langchain_community.vectorstores.pgvector.PGVector object at 0x79f864697940> search_kwargs={'k': '3'}
+ 
+================================================================================================================
+ROUGE
+================================================================================================================
+{'rouge1': Score(precision=0.07042253521126761, recall=0.5555555555555556, fmeasure=0.125), 'rouge2': Score(precision=0.0, recall=0.0, fmeasure=0.0), 'rougeL': Score(precision=0.056338028169014086, recall=0.4444444444444444, fmeasure=0.1)}
+ 
+================================================================================================================
+BLEU
+================================================================================================================
+{'BLEU-1': 0.04285714285714286, 'BLEU-2': 0.01624443572589565, 'BLEU-3': 0.009824598497066538, 'BLEU-4': 0.006012449720133031}
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3556268827415946 
+ Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)
+Di samping memiliki 9 kantor cabang di kota-kota besar di Indonesia (dibantu beberapa distributor yang ditunjuk menjadi point operator dari stock operator di wilayah Sumatera, Jawa, Bali, Nusa Tenggara, Kalimantan, Sulawesi, dan Irian Jaya). CNI juga memantapkan sayap-sayap bisnisnya ke mancanegara. Malaysia adalah negeri pertama yang dimasuki CNI, joint venture dengan sebuah perusahaan MLM lokal yang telah beroperasi hampir 4 tahun (1989-1993). Pada tahun 1993, CNI Indonesia-Malaysia ini juga memasuki pasar Hongkong, salah satu pusat perdagangan di Asia Pasifik, dan Batukan sampai ke negeri 'leluhur' MLM, Amerika Serikat.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3567715175351376 
+ Sosok Sang Perintis di Balik Sukses CNI
+Manajemen perusahaan yang menjual hanya satu produk ini (yakni Sun Chlorella), dipegang sepenuhnya oleh Abrian, kecuali masalah keuangan. Di SCI, ia bertanggung jawab di segala lini mulai menangani administrasi, pemasaran, penjualan ke lapangan, gudang, layanan pelanggan, perizinan ke Depkes sampai urusan ke polisi.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.3616900322885539 
+ Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)
+Sebagai perusahaan MLM yang pertama di Indonesia, CNI boleh dikatakan sebagai pionir dan sekaligus yang terbaik pengorganisasiannya dan terluas jaringan distribusinya. Pada tahun 1997, CNI mampu menarik minat sekitar 150.000 orang untuk melibatkan diri sebagai distributor independen CNI, dan menjelang akhir tahun 1998, CNI mencatat lebih dari 240.000 orang distributor independennya di Indonesia. Dengan demikian, CNI dapat dikatakan sebagai market leader di bisnis ini, dan bersaing ketat dengan AMWAY.
+ 
+================================================================================================================
+result
+================================================================================================================
+{'input': 'Siapa pendiri CNI?', 'context': [Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/45', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 135.98000000000002, 'r': 520.436, 'b': 81.38400000000001, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 317]}]}], 'headings': ['Sosok Sang Perintis di Balik Sukses CNI'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sosok Sang Perintis di Balik Sukses CNI\nManajemen perusahaan yang menjual hanya satu produk ini (yakni Sun Chlorella), dipegang sepenuhnya oleh Abrian, kecuali masalah keuangan. Di SCI, ia bertanggung jawab di segala lini mulai menangani administrasi, pemasaran, penjualan ke lapangan, gudang, layanan pelanggan, perizinan ke Depkes sampai urusan ke polisi.'), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/37', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 3, 'bbox': {'l': 72.024, 't': 767.76, 'r': 521.147, 'b': 669.7, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 630]}]}], 'headings': ['Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content="Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)\nDi samping memiliki 9 kantor cabang di kota-kota besar di Indonesia (dibantu beberapa distributor yang ditunjuk menjadi point operator dari stock operator di wilayah Sumatera, Jawa, Bali, Nusa Tenggara, Kalimantan, Sulawesi, dan Irian Jaya). CNI juga memantapkan sayap-sayap bisnisnya ke mancanegara. Malaysia adalah negeri pertama yang dimasuki CNI, joint venture dengan sebuah perusahaan MLM lokal yang telah beroperasi hampir 4 tahun (1989-1993). Pada tahun 1993, CNI Indonesia-Malaysia ini juga memasuki pasar Hongkong, salah satu pusat perdagangan di Asia Pasifik, dan Batukan sampai ke negeri 'leluhur' MLM, Amerika Serikat."), Document(metadata={'source': '/tmp/tmpih8asbtr.pdf', 'dl_meta': {'schema_name': 'docling_core.transforms.chunker.DocMeta', 'version': '1.0.0', 'doc_items': [{'self_ref': '#/texts/62', 'parent': {'$ref': '#/body'}, 'children': [], 'content_layer': 'body', 'label': 'text', 'prov': [{'page_no': 5, 'bbox': {'l': 72.024, 't': 123.98000000000002, 'r': 517.013, 'b': 84.024, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [0, 282]}, {'page_no': 5, 'bbox': {'l': 72.024, 't': 123.98000000000002, 'r': 517.013, 'b': 84.024, 'coord_origin': 'BOTTOMLEFT'}, 'charspan': [283, 691]}]}], 'headings': ['Sosok Sang Perintis di Balik Sukses CNI'], 'origin': {'mimetype': 'application/pdf', 'binary_hash': 16126177771356318977, 'filename': 'tmpih8asbtr.pdf'}}}, page_content='Sosok Sang Perintis di Balik Sukses CNI\nibadah atau impian.')], 'answer': 'Pendiri Citra Nusa Insan Cemerlang (CNI) adalah Abrian.'}
+ 
+================================================================================================================
+session
+================================================================================================================
+tags=['PGVector', 'OllamaEmbeddings'] vectorstore=<langchain_community.vectorstores.pgvector.PGVector object at 0x79f8591dbcd0> search_kwargs={'k': '3'}
+ 
+================================================================================================================
+ROUGE
+================================================================================================================
+{'rouge1': Score(precision=1.0, recall=0.8888888888888888, fmeasure=0.9411764705882353), 'rouge2': Score(precision=0.8571428571428571, recall=0.75, fmeasure=0.7999999999999999), 'rougeL': Score(precision=1.0, recall=0.8888888888888888, fmeasure=0.9411764705882353)}
+ 
+================================================================================================================
+BLEU
+================================================================================================================
+{'BLEU-1': 0.8824969025845955, 'BLEU-2': 0.8170333703998377, 'BLEU-3': 0.7897523702130573, 'BLEU-4': 0.767279645960659}
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.30955877395713594 
+ Sosok Sang Perintis di Balik Sukses CNI
+Manajemen perusahaan yang menjual hanya satu produk ini (yakni Sun Chlorella), dipegang sepenuhnya oleh Abrian, kecuali masalah keuangan. Di SCI, ia bertanggung jawab di segala lini mulai menangani administrasi, pemasaran, penjualan ke lapangan, gudang, layanan pelanggan, perizinan ke Depkes sampai urusan ke polisi.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.312025120861241 
+ Sejarah Perusahaan CNI (PT. Citra Nusa Insan Cemerlang)
+Di samping memiliki 9 kantor cabang di kota-kota besar di Indonesia (dibantu beberapa distributor yang ditunjuk menjadi point operator dari stock operator di wilayah Sumatera, Jawa, Bali, Nusa Tenggara, Kalimantan, Sulawesi, dan Irian Jaya). CNI juga memantapkan sayap-sayap bisnisnya ke mancanegara. Malaysia adalah negeri pertama yang dimasuki CNI, joint venture dengan sebuah perusahaan MLM lokal yang telah beroperasi hampir 4 tahun (1989-1993). Pada tahun 1993, CNI Indonesia-Malaysia ini juga memasuki pasar Hongkong, salah satu pusat perdagangan di Asia Pasifik, dan Batukan sampai ke negeri 'leluhur' MLM, Amerika Serikat.
+ 
+================================================================================================================
+Top k Chunks
+================================================================================================================
+Score: 0.31294550053460246 
+ Sosok Sang Perintis di Balik Sukses CNI
+ibadah atau impian.
+ 

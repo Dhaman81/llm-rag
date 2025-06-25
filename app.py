@@ -67,9 +67,13 @@ if menu == "Upload and Embedding PDF":
 elif menu == "Chatbot RAG":
     eval_score_rouge = {}
     eval_score_bleu = {}
+    ref_input = ""
     st.title("Customer Service")
     user_input = st.chat_input("Write your question...")
-    ref_input = st.text_input("Reference")
+    # user_input = st.text_input("Write your question...", key="chat")
+    is_evaluation = st.sidebar.checkbox("I want to evaluate LLM response")
+    if is_evaluation:
+        ref_input = st.text_input("Reference")
 
     # initial session
     if "chat_history" not in st.session_state:
@@ -107,8 +111,10 @@ elif menu == "Chatbot RAG":
             with chat_placeholder.chat_message("assistant"):
                 st.markdown(msg)
 
-    st.write("ROUGE Score:", eval_score_rouge)
-    st.write("BLEU Score:", eval_score_bleu)
+    if eval_score_rouge and is_evaluation:
+        st.write("ROUGE Score:", eval_score_rouge)
+    if eval_score_bleu and is_evaluation:
+        st.write("BLEU Score:", eval_score_bleu)
 
 #3
 elif menu == "Test RAG With Data QA":

@@ -11,8 +11,8 @@ import libs.db as db
 from dotenv import load_dotenv
 load_dotenv()
 
-# EMBEDDING_MODEL = "llama3.2"
-EMBEDDING_MODEL = "nomic-embed-text"
+EMBEDDING_MODEL = "llama3.2"
+# EMBEDDING_MODEL = "nomic-embed-text"
 
 def create_pgvector_table():
     engine = create_engine(db.db_connection_string())
