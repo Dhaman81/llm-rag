@@ -1,12 +1,6 @@
 # 🧠 Aplikasi LLM dengan RAG (Retrieval-Augmented Generation)
 
-
 Repositori ini berisi aplikasi NLP berbasis Large Language Model (LLM) yang menggunakan teknik RAG (Retrieval-Augmented Generation) untuk meningkatkan kualitas jawaban berdasarkan dokumen eksternal. Aplikasi ini dibuat menggunakan Python 3.10 dan dilengkapi dengan antarmuka menggunakan Streamlit.
-
-
-## 👤 Author
-**Dhaman**
-
 
 ## 📦 Fitur Utama
 - Ekstraksi dokumen menggunakan Docling
@@ -93,3 +87,20 @@ Aplikasi mendukung evaluasi hasil model dengan:
 **ROUGE**: Mengukur kemiripan berdasarkan n-gram, longest common subsequence.
 
 **BLEU**: Evaluasi teks berbasis precision pada n-gram (melalui nltk.translate.bleu_score).
+
+---
+## 👤 Author
+**Dhaman, S.T.**
+
+## 👤 Special Thanks to
+
+**Dr. SAJARWO ANGGAI, S.ST., M.T.** : Kaprodi Fakultas Magister Teknis Informatika - Universitas Pamulang
+**DR ARYA ADHYAKSA WASKITA, S.SI.,M.SI** : Dosen di Fakultas Magister Teknis Informatika - Universitas Pamulang
+
+**Rekan-rekan peneliti**
+1. Rafi Mahmud Zein
+2. Septian
+3. Adrian
+4. Dahlan
+5. Dandi
+6. Agus Salim
