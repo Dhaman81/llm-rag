@@ -89,13 +89,16 @@ Aplikasi mendukung evaluasi hasil model dengan:
 **BLEU**: Evaluasi teks berbasis precision pada n-gram (melalui nltk.translate.bleu_score).
 
 ---
-## 👤 Author
+
+## Author
 **Dhaman, S.T.**
+1. Developer Odoo
+2. Calon Peneliti LLM dan RAG
 
-## 👤 Special Thanks to
+## Special Thanks to
 
-**Dr. SAJARWO ANGGAI, S.ST., M.T.** : Kaprodi Fakultas Magister Teknis Informatika - Universitas Pamulang
-**DR ARYA ADHYAKSA WASKITA, S.SI.,M.SI** : Dosen di Fakultas Magister Teknis Informatika - Universitas Pamulang
+1. **Dr. SAJARWO ANGGAI, S.ST., M.T.** : Kaprodi Fakultas Magister Teknis Informatika - Universitas Pamulang
+2. **DR ARYA ADHYAKSA WASKITA, S.SI.,M.SI** : Dosen di Fakultas Magister Teknis Informatika - Universitas Pamulang
 
 **Rekan-rekan peneliti**
 1. Rafi Mahmud Zein
