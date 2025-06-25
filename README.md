@@ -44,8 +44,6 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-
-
 ### 5. Setup PostgreSQL 16 dan pgvector
 Ubuntu / Debian:
 ```bash
@@ -99,6 +97,7 @@ Aplikasi mendukung evaluasi hasil model dengan:
 
 1. **Dr. SAJARWO ANGGAI, S.ST., M.T.** : Kaprodi Fakultas Magister Teknis Informatika - Universitas Pamulang
 2. **DR ARYA ADHYAKSA WASKITA, S.SI.,M.SI** : Dosen di Fakultas Magister Teknis Informatika - Universitas Pamulang
+3. **Bp. Achmad Zaenuri** : Pengajar dan Peneliti di NAVASENA
 
 **Rekan-rekan peneliti**
 1. Rafi Mahmud Zein

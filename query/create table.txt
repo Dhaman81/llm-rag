@@ -1,0 +1,59 @@
+## Create Table Collection
+CREATE TABLE IF NOT EXISTS public.langchain_pg_collection
+(
+    name character varying COLLATE pg_catalog."default",
+    cmetadata json,
+    uuid uuid NOT NULL,
+    CONSTRAINT langchain_pg_collection_pkey PRIMARY KEY (uuid)
+)
+
+
+## Create Table Embedding
+CREATE TABLE IF NOT EXISTS public.langchain_pg_embedding
+(
+    collection_id uuid,
+    embedding vector,
+    document character varying COLLATE pg_catalog."default",
+    cmetadata json,
+    custom_id character varying COLLATE pg_catalog."default",
+    uuid uuid NOT NULL,
+    CONSTRAINT langchain_pg_embedding_pkey PRIMARY KEY (uuid),
+    CONSTRAINT langchain_pg_embedding_collection_id_fkey FOREIGN KEY (collection_id)
+        REFERENCES public.langchain_pg_collection (uuid) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE
+)
+
+## Create table ROUGE SCORE
+CREATE TABLE IF NOT EXISTS public.rag_score
+(
+    id integer NOT NULL DEFAULT nextval('rag_score_id_seq'::regclass),
+    create_uid integer,
+    write_uid integer,
+    reference character varying COLLATE pg_catalog."default" NOT NULL,
+    prediction character varying COLLATE pg_catalog."default",
+    score_type character varying COLLATE pg_catalog."default",
+    create_date timestamp without time zone,
+    write_date timestamp without time zone,
+    r1_precision double precision,
+    r1_recall double precision,
+    r1_fmeasure double precision,
+    r2_precision double precision,
+    r2_recall double precision,
+    r2_fmeasure double precision,
+    rl_precision double precision,
+    rl_recall double precision,
+    rl_fmeasure double precision,
+    question character varying COLLATE pg_catalog."default" NOT NULL,
+    model character varying COLLATE pg_catalog."default",
+    collection character varying COLLATE pg_catalog."default",
+    CONSTRAINT rag_score_pkey PRIMARY KEY (id),
+    CONSTRAINT rag_score_create_uid_fkey FOREIGN KEY (create_uid)
+        REFERENCES public.res_users (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE SET NULL,
+    CONSTRAINT rag_score_write_uid_fkey FOREIGN KEY (write_uid)
+        REFERENCES public.res_users (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE SET NULL
+)
