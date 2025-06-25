@@ -67,6 +67,7 @@ if menu == "Upload and Embedding PDF":
 elif menu == "Chatbot RAG":
     eval_score_rouge = {}
     eval_score_bleu = {}
+    rouge1 = {}
     ref_input = ""
     st.title("Customer Service")
     user_input = st.chat_input("Write your question...")
@@ -87,6 +88,7 @@ elif menu == "Chatbot RAG":
             log.write_log("log.txt", "session", st.session_state.retriever)
             eval_score_rouge = rouge.get_rouge_score(ref_input,response)
             eval_score_bleu = bleu.get_bleu_score(ref_input, response)
+            rouge1 =  rouge.get_rouge_stat(ref_input, response)
 
             log.write_log("log.txt", "ROUGE", eval_score_rouge)
             log.write_log("log.txt", "BLEU", eval_score_bleu)
@@ -115,6 +117,8 @@ elif menu == "Chatbot RAG":
         st.write("ROUGE Score:", eval_score_rouge)
     if eval_score_bleu and is_evaluation:
         st.write("BLEU Score:", eval_score_bleu)
+    if rouge1 and is_evaluation:
+        st.write("ROUGE1:", rouge1)
 
 #3
 elif menu == "Test RAG With Data QA":

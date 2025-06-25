@@ -5,6 +5,12 @@ import libs.llm_api as llm_api
 import libs.db as pg_conn
 from sqlalchemy import create_engine, text
 
+class WordTokenizer:
+    def tokenize(self, text: str):
+        # Memecah teks berdasarkan whitespace → daftar kata
+        text = text.lower()
+        return text.split()
+
 def eval_rouge(reference, prediction):
     scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
     scores = scorer.score(reference, prediction)
@@ -17,6 +23,32 @@ def get_rouge_score(reference, prediction):
     scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
     scores = scorer.score(reference, prediction)
     return scores
+
+def get_rouge_stat(reference, prediction):
+
+    scorer = rouge_scorer.RougeScorer(
+        ['rouge1'],
+        use_stemmer=False,
+        tokenizer=WordTokenizer()
+    )
+    score = scorer.score(reference, prediction)['rouge1']
+
+    total_ref = len(WordTokenizer().tokenize(reference))
+    total_pred = len(WordTokenizer().tokenize(prediction))
+
+    #(ingat recall = match / total_ref)
+    matched = int(round(score.recall * total_ref))
+
+    return {
+        'ref_chars': reference,
+        'total_ref_chars': total_ref,
+        'pred_chars': prediction,
+        'total_pred_chars': total_pred,
+        'matched_chars': matched,
+        'precision': score.precision,
+        'recall': score.recall,
+        'fmeasure': score.fmeasure
+    }
 
 def fetch_data_eval_rouge():
     conn = pg_conn.get_engine()
