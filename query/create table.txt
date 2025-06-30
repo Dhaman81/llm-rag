@@ -57,3 +57,10 @@ CREATE TABLE IF NOT EXISTS public.rag_score
         ON UPDATE NO ACTION
         ON DELETE SET NULL
 )
+
+
+select * from langchain_pg_embedding
+delete from langchain_pg_embedding where collection_id='42742671-77dc-4691-9eb7-28e656544abf'
+
+select * from langchain_pg_collection
+delete from langchain_pg_collection  where name in ('Umum','langchain','nomic_profil_perusahaan','formatting_QA_Kesehatan')

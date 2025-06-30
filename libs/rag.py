@@ -5,14 +5,15 @@ from langchain_community.vectorstores.pgvector import PGVector
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_docling import DoclingLoader
+import inspect
 from sqlalchemy import create_engine, text
 import libs.logging_txt as log
 import libs.db as db
 from dotenv import load_dotenv
 load_dotenv()
 
-EMBEDDING_MODEL = "llama3.2"
-# EMBEDDING_MODEL = "nomic-embed-text"
+# EMBEDDING_MODEL = "llama3.2"
+EMBEDDING_MODEL = "nomic-embed-text"
 
 def create_pgvector_table():
     engine = create_engine(db.db_connection_string())
@@ -30,6 +31,7 @@ def load_and_split_pdf(file_path):
 
 def load_and_split_pdf_docling(file_path, chunk_size=1000, chunk_overlap=200):
     loader = DoclingLoader(file_path=file_path)
+    # print(inspect.signature(DoclingLoader.__init__))
     raw_documents = loader.load()
 
     # Filter aman: buang dokumen kosong atau corrupt

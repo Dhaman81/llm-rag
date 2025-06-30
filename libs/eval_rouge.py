@@ -24,6 +24,9 @@ def get_rouge_score(reference, prediction):
     scores = scorer.score(reference, prediction)
     return scores
 
+def view_rouge_score(scores):
+    return pd.DataFrame(scores, index=["Precision", "Recall", "F1 Score"])
+
 def get_rouge_stat(reference, prediction):
 
     scorer = rouge_scorer.RougeScorer(
@@ -66,45 +69,46 @@ def insert_data_eval_rouge(model,collection,question, reference, prediction, sco
     scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
     scores = scorer.score(reference, prediction)
 
-    r1 = scores["rouge1"]
-    r2 = scores["rouge2"]
-    rl = scores["rougeL"]
+    if reference:
+        r1 = scores["rouge1"]
+        r2 = scores["rouge2"]
+        rl = scores["rougeL"]
 
-    data = {
-        "model": model,
-        "collection": collection,
-        "question": question,
-        "reference": reference,
-        "prediction": prediction,
-        "score_type": score_type,
-        "r1_precision": r1.precision,
-        "r1_recall": r1.recall,
-        "r1_fmeasure": r1.fmeasure,
-        "r2_precision": r2.precision,
-        "r2_recall": r2.recall,
-        "r2_fmeasure": r2.fmeasure,
-        "rl_precision": rl.precision,
-        "rl_recall": rl.recall,
-        "rl_fmeasure": rl.fmeasure,
-    }
+        data = {
+            "model": model,
+            "collection": collection,
+            "question": question,
+            "reference": reference,
+            "prediction": prediction,
+            "score_type": score_type,
+            "r1_precision": r1.precision,
+            "r1_recall": r1.recall,
+            "r1_fmeasure": r1.fmeasure,
+            "r2_precision": r2.precision,
+            "r2_recall": r2.recall,
+            "r2_fmeasure": r2.fmeasure,
+            "rl_precision": rl.precision,
+            "rl_recall": rl.recall,
+            "rl_fmeasure": rl.fmeasure,
+        }
 
-    query = text("""
-        INSERT INTO rag_score (
-            model,collection,
-            question, reference, prediction, score_type,
-            r1_precision, r1_recall, r1_fmeasure,
-            r2_precision, r2_recall, r2_fmeasure,
-            rl_precision, rl_recall, rl_fmeasure,
-            create_date, write_date
-        )
-        VALUES (
-            :model,:collection,
-            :question, :reference, :prediction, :score_type,
-            :r1_precision, :r1_recall, :r1_fmeasure,
-            :r2_precision, :r2_recall, :r2_fmeasure,
-            :rl_precision, :rl_recall, :rl_fmeasure,
-            now(), now()
-        )
-    """)
-    with engine.begin() as conn:
-        conn.execute(query, data)
+        query = text("""
+            INSERT INTO rag_score (
+                model,collection,
+                question, reference, prediction, score_type,
+                r1_precision, r1_recall, r1_fmeasure,
+                r2_precision, r2_recall, r2_fmeasure,
+                rl_precision, rl_recall, rl_fmeasure,
+                create_date, write_date
+            )
+            VALUES (
+                :model,:collection,
+                :question, :reference, :prediction, :score_type,
+                :r1_precision, :r1_recall, :r1_fmeasure,
+                :r2_precision, :r2_recall, :r2_fmeasure,
+                :rl_precision, :rl_recall, :rl_fmeasure,
+                now(), now()
+            )
+        """)
+        with engine.begin() as conn:
+            conn.execute(query, data)

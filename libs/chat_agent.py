@@ -19,8 +19,15 @@ CNI = (
         "Context: {context}"
 )
 
-CS = ("Anda adah customer service yang bertugas untuk menjawab pertanyaan berdasarkan dokumen"
-        "Jawablah berdasarkan konteks berikut:\n\n{context}"
+CS = (
+      "jangan memberikan keterangan tambahan, jawaban singkat maksimal 50 kata sesuai dengan kata yang ditanya"
+      "Jawablah berdasarkan informasi konteks berikut: \n ------------------------ \n{context}\n ------------------------------\n. "
+      "Berikan informasi dalam konteks, jangan berikan jawaban berdasarkan informasi sebelumnya"
+      )
+
+NON_RAG = (
+      "Berikan jawaban dari knowledge model LLM yang sudah ada."
+        "Jika tidak ditemukan jawabannya, jawab dengan Saya tidak tahu."
       )
 
 NOSMOKING = (

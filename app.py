@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from libs.chat_agent import chat_with_agent
 from libs import rag
 from libs.models import get_ollama_models
@@ -26,8 +27,10 @@ default_model = 'llama3.2:latest'
 default_index = models.index(default_model)
 selected_model = st.sidebar.selectbox("Model", models, index=default_index)
 
+collection_name = ""
 selected_collection = st.sidebar.selectbox("Collection", collections)
-collection_name = selected_collection.split("-")[0]
+if selected_collection:
+    collection_name = selected_collection.split("-")[0]
 
 menu = st.sidebar.radio("Menu", [
     "Chatbot RAG",
@@ -57,7 +60,8 @@ if menu == "Upload and Embedding PDF":
         st.info("Load and split documents...") # ['A','B','C']
         docs = load_and_split_pdf_docling(path)
         for chunk in docs:
-            st.success(f"✅ {(len(chunk.page_content))} - {(chunk.page_content)} ")
+            # st.success(f"✅ {(len(chunk.page_content))} - {(chunk.page_content)} ")
+            st.success(f"{(chunk)}")
         st.success(f"✅ {len(docs)} chunks created.")
 
         if st.button("Save to vector DB"):
@@ -114,15 +118,48 @@ elif menu == "Chatbot RAG":
                 st.markdown(msg)
 
     if eval_score_rouge and is_evaluation:
-        st.write("ROUGE Score:", eval_score_rouge)
-    if eval_score_bleu and is_evaluation:
-        st.write("BLEU Score:", eval_score_bleu)
-    if rouge1 and is_evaluation:
-        st.write("ROUGE1:", rouge1)
+        st.dataframe(rouge.view_rouge_score(eval_score_rouge).style.format("{:.2%}"), width=500)
+    # if eval_score_bleu and is_evaluation:
+    #     st.write("BLEU Score:", eval_score_bleu)
+    # if rouge1 and is_evaluation:
+    #     st.write("ROUGE1:", rouge1)
 
 #3
 elif menu == "Test RAG With Data QA":
-    st.info("Loading Test RAG With Data QA.....")
+    uploaded_file = st.file_uploader(
+        "Please upload CSV file format (must have column 'question' and 'reference')", type=["csv"]
+    )
+    if uploaded_file is not None:
+        try:
+            df_input = pd.read_csv(uploaded_file, usecols=["question", "reference"])
+        except Exception as e:
+            st.error(
+                "❌ Failed read CSV. Make sure you have column 'question' and 'reference'.\n"
+                f"Detail: {e}"
+            )
+            # return
+
+        st.markdown("**Top 5 data:**")
+        st.dataframe(df_input.head())
+        total = len(df_input)
+
+        if st.button("Start ROUGE Evaluation"):
+            with st.spinner("Evaluating, Please wait ... "):
+                my_bar = st.progress(0, text="Processing 0/{}".format(total))
+                for idx, row in enumerate(df_input.itertuples(index=False), start=1):
+                    question = row.question
+                    reference = row.reference
+                    st.session_state.retriever = rag.load_retriever_from_pgvector(collection_name)
+                    response = chat_with_agent(question, st.session_state.retriever, reference=reference,
+                                           model=selected_model, collection=collection_name)
+                    eval_score_rouge = rouge.get_rouge_score(question, response)
+                    my_bar.progress(min(idx / total, 1.0), text=f"Progress {idx}/{total} lines")
+                    # st.dataframe(rouge.view_rouge_score(eval_score_rouge).style.format("{:.2%}"), width=500)
+                st.success("Finished.")
+
+
+    else:
+        st.info("Please upload your QA data.")
 
 #4
 elif menu == "ROUGE Evaluation":
