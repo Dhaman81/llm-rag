@@ -64,6 +64,129 @@ def fetch_data_eval_rouge():
     df = pd.read_sql_query(query, conn)
     return df
 
+def query_precision():
+    conn = pg_conn.get_engine()
+    query = text("""Select 
+            model,
+            SUM(rag_Rouge1_Precision) as rag_Rouge1_Precision,
+            SUM(rag_Rouge2_Precision) as rag_Rouge2_Precision,
+            SUM(rag_RougeL_Precision) as rag_RougeL_Precision,
+            SUM(nonrag_Rouge1_Precision) as nonrag_Rouge1_Precision,
+            SUM(nonrag_Rouge2_Precision) as nonrag_Rouge2_Precision,
+            SUM(nonrag_RougeL_Precision) as nonrag_RougeL_Precision
+        from 
+        ((select model, 
+            avg(r1_precision) as rag_Rouge1_Precision,
+            avg(r2_precision) as rag_Rouge2_Precision,
+            avg(rl_precision) as rag_RougeL_Precision,
+            0 as nonrag_Rouge1_Precision,
+            0 as nonrag_Rouge2_Precision,
+            0 as nonrag_RougeL_Precision
+        from rag_score
+            where collection in ('Katalog Produk','Penyakit dan produknya', 'Profil Perusahaan')
+            -- and r1_precision is not null
+            group by model
+            order by model)
+        UNION 
+        (select model, 
+            0 as rag_Rouge1_Precision,
+            0 as rag_Rouge2_Precision,
+            0 as rag_RougeL_Precision,
+            avg(r1_precision) as nonrag_Rouge1_Precision,
+            avg(r2_precision) as nonrag_Rouge2_Precision,
+            avg(rl_precision) as nonrag_RougeL_Precision
+        from rag_score
+            where collection in ('Kosong')
+            -- and r1_precision is not null
+            group by model
+            order by model)) AS Precision
+            group by model""")
+
+    precision_df = pd.read_sql_query(query, conn)
+    return precision_df
+
+def query_recall():
+    conn = pg_conn.get_engine()
+    query = text("""Select 
+            model,
+            SUM(rag_Rouge1_recall) as rag_Rouge1_recall,
+            SUM(rag_Rouge2_recall) as rag_Rouge2_recall,
+            SUM(rag_RougeL_recall) as rag_RougeL_recall,
+            SUM(nonrag_Rouge1_recall) as nonrag_Rouge1_recall,
+            SUM(nonrag_Rouge2_recall) as nonrag_Rouge2_recall,
+            SUM(nonrag_RougeL_recall) as nonrag_RougeL_recall
+        from 
+        ((select model, 
+            avg(r1_recall) as rag_Rouge1_recall,
+            avg(r2_recall) as rag_Rouge2_recall,
+            avg(rl_recall) as rag_RougeL_recall,
+            0 as nonrag_Rouge1_recall,
+            0 as nonrag_Rouge2_recall,
+            0 as nonrag_RougeL_recall
+        from rag_score
+            where collection in ('Katalog Produk','Penyakit dan produknya', 'Profil Perusahaan')
+            -- and r1_precision is not null
+            group by model
+            order by model)
+        UNION 
+        (select model, 
+            0 as rag_Rouge1_recall,
+            0 as rag_Rouge2_recall,
+            0 as rag_RougeL_recall,
+            avg(r1_recall) as nonrag_Rouge1_Recall,
+            avg(r2_recall) as nonrag_Rouge2_Recall,
+            avg(rl_recall) as nonrag_RougeL_Recall
+        from rag_score
+            where collection in ('Kosong')
+            -- and r1_precision is not null
+            group by model
+            order by model)) AS Recall
+            group by model""")
+
+    recall_df = pd.read_sql_query(query, conn)
+    return recall_df
+
+def query_f1score():
+    conn = pg_conn.get_engine()
+    query = text("""Select 
+            model,
+            SUM(rag_Rouge1_fmeasure) as rag_Rouge1_F1Score,
+            SUM(rag_Rouge2_fmeasure) as rag_Rouge2_F1Score,
+            SUM(rag_RougeL_fmeasure) as rag_RougeL_F1Score,
+            SUM(nonrag_Rouge1_fmeasure) as nonrag_Rouge1_F1Score,
+            SUM(nonrag_Rouge2_fmeasure) as nonrag_Rouge2_F1Score,
+            SUM(nonrag_RougeL_fmeasure) as nonrag_RougeL_F1Score
+        from 
+        ((select model, 
+            avg(r1_recall) as rag_Rouge1_fmeasure,
+            avg(r2_recall) as rag_Rouge2_fmeasure,
+            avg(rl_recall) as rag_RougeL_fmeasure,
+            0 as nonrag_Rouge1_fmeasure,
+            0 as nonrag_Rouge2_fmeasure,
+            0 as nonrag_RougeL_fmeasure
+        from rag_score
+            where collection in ('Katalog Produk','Penyakit dan produknya', 'Profil Perusahaan')
+            -- and r1_precision is not null
+            group by model
+            order by model)
+        UNION 
+        (select model, 
+            0 as rag_Rouge1_fmeasure,
+            0 as rag_Rouge2_fmeasure,
+            0 as rag_RougeL_fmeasure,
+            avg(r1_recall) as nonrag_Rouge1_fmeasure,
+            avg(r2_recall) as nonrag_Rouge2_fmeasure,
+            avg(rl_recall) as nonrag_RougeL_fmeasure
+        from rag_score
+            where collection in ('Kosong')
+            -- and r1_precision is not null
+            group by model
+            order by model)) AS F1Score
+            group by model""")
+
+    f1score_df = pd.read_sql_query(query, conn)
+    return f1score_df
+
 def insert_data_eval_rouge(model,collection,question, reference, prediction, score_type="rouge_all"):
     engine = pg_conn.get_engine()
     scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)

@@ -9,6 +9,7 @@ import os
 import libs.logging_txt as log
 import libs.eval_rouge as rouge
 import libs.eval_bleu as bleu
+import altair as alt
 
 from libs.rag import (
     load_and_split_pdf,
@@ -142,7 +143,7 @@ elif menu == "Test RAG With Data QA":
         st.markdown("**Top 5 data:**")
         st.dataframe(df_input.head())
         total = len(df_input)
-
+        st.info("Question total: ",total)
         if st.button("Start ROUGE Evaluation"):
             with st.spinner("Evaluating, Please wait ... "):
                 my_bar = st.progress(0, text="Processing 0/{}".format(total))
@@ -164,12 +165,157 @@ elif menu == "Test RAG With Data QA":
 #4
 elif menu == "ROUGE Evaluation":
     st.title("ROUGE Evaluation Metrik")
+    # try:
+    #     df = rouge.fetch_data_eval_rouge()
+    #     if df.empty:
+    #         st.warning("Tidak ada data untuk ditampilkan.")
+    #     else:
+    #         st.dataframe(df, use_container_width=True)
+    # except Exception as e:
+    #     st.error(f"Terjadi error saat mengambil data: {e}")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        try:
+            st.info("Tabel Perbandingan ROUGE Precision by Model")
+            df_prec = rouge.query_precision()
+            if df_prec.empty:
+                st.warning("Tidak ada data untuk ditampilkan.")
+            else:
+                st.dataframe(df_prec, use_container_width=True)
+                df_long = df_prec.melt(
+                    id_vars="model",
+                    value_vars=[
+                        "rag_rouge1_precision",
+                        "rag_rouge2_precision",
+                        "rag_rougel_precision",
+                        "nonrag_rouge1_precision",
+                        "nonrag_rouge2_precision",
+                        "nonrag_rougel_precision"
+                    ],
+                    var_name="Tipe Score",
+                    value_name="Nilai"
+                )
+
+                ordered_scores = [
+                    "rag_rouge1_precision",
+                    "rag_rouge2_precision",
+                    "rag_rougel_precision",
+                    "nonrag_rouge1_precision",
+                    "nonrag_rouge2_precision",
+                    "nonrag_rougel_precision"
+                ]
+
+                chart = alt.Chart(df_long).mark_bar(size=20).encode(
+                    x=alt.X('Tipe Score:N', title='Jenis Score', sort=ordered_scores),
+                    xOffset=alt.XOffset('model:N'),
+                    y=alt.Y('Nilai:Q', title='Nilai Precision'),
+                    color=alt.Color('model:N', title='Model'),
+                    tooltip=['model', 'Tipe Score', 'Nilai']
+                ).properties(
+                    width=700,
+                    height=400,
+                    title='Perbandingan Precision ROUGE (Grouped by Model)'
+                )
+
+                st.altair_chart(chart, use_container_width=True)
+
+        except Exception as e:
+            st.error(f"Terjadi error saat mengambil data: {e}")
+    with col2:
+        try:
+            st.info("Tabel Perbandingan ROUGE Recall by Model")
+            df_recall = rouge.query_recall()
+            if df_recall.empty:
+                st.warning("Tidak ada data untuk ditampilkan.")
+            else:
+                st.dataframe(df_recall, use_container_width=True)
+
+                df_long = df_recall.melt(
+                    id_vars="model",
+                    value_vars=[
+                        "rag_rouge1_recall",
+                        "rag_rouge2_recall",
+                        "rag_rougel_recall",
+                        "nonrag_rouge1_recall",
+                        "nonrag_rouge2_recall",
+                        "nonrag_rougel_recall"
+                    ],
+                    var_name="Tipe Score",
+                    value_name="Nilai"
+                )
+
+                ordered_scores = [
+                    "rag_rouge1_recall",
+                    "rag_rouge2_recall",
+                    "rag_rougel_recall",
+                    "nonrag_rouge1_recall",
+                    "nonrag_rouge2_recall",
+                    "nonrag_rougel_recall"
+                ]
+
+                chart = alt.Chart(df_long).mark_bar(size=20).encode(
+                    x=alt.X('Tipe Score:N', title='Jenis Score', sort=ordered_scores),
+                    xOffset=alt.XOffset('model:N'),
+                    y=alt.Y('Nilai:Q', title='Nilai Recall'),
+                    color=alt.Color('model:N', title='Model'),
+                    tooltip=['model', 'Tipe Score', 'Nilai']
+                ).properties(
+                    width=700,
+                    height=400,
+                    title='Perbandingan Recall ROUGE (Grouped by Model)'
+                )
+
+                st.altair_chart(chart, use_container_width=True)
+
+        except Exception as e:
+            st.error(f"Terjadi error saat mengambil data: {e}")
+
     try:
-        df = rouge.fetch_data_eval_rouge()
-        if df.empty:
+        st.info("Tabel Perbandingan ROUGE F1 Score by Model")
+        df_f1score = rouge.query_f1score()
+        if df_f1score.empty:
             st.warning("Tidak ada data untuk ditampilkan.")
         else:
-            st.dataframe(df, use_container_width=True)
+            st.dataframe(df_f1score, use_container_width=True)
+
+            df_long = df_f1score.melt(
+                id_vars="model",
+                value_vars=[
+                    "rag_rouge1_f1score",
+                    "rag_rouge2_f1score",
+                    "rag_rougel_f1score",
+                    "nonrag_rouge1_f1score",
+                    "nonrag_rouge2_f1score",
+                    "nonrag_rougel_f1score"
+                ],
+                var_name="Tipe Score",
+                value_name="Nilai"
+            )
+
+            ordered_scores = [
+                "rag_rouge1_f1score",
+                "rag_rouge2_f1score",
+                "rag_rougel_f1score",
+                "nonrag_rouge1_f1score",
+                "nonrag_rouge2_f1score",
+                "nonrag_rougel_f1score"
+            ]
+
+            chart = alt.Chart(df_long).mark_bar(size=20).encode(
+                x=alt.X('Tipe Score:N', title='Jenis Score', sort=ordered_scores),
+                xOffset=alt.XOffset('model:N'),
+                y=alt.Y('Nilai:Q', title='Nilai F1 Score'),
+                color=alt.Color('model:N', title='Model'),
+                tooltip=['model', 'Tipe Score', 'Nilai']
+            ).properties(
+                width=700,
+                height=400,
+                title='Perbandingan F1 Score ROUGE (Grouped by Model)'
+            )
+
+            st.altair_chart(chart, use_container_width=True)
+
     except Exception as e:
         st.error(f"Terjadi error saat mengambil data: {e}")
 
